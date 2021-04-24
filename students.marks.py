@@ -86,15 +86,15 @@ def show_marks():
     for i in range(len(students)):
         print("[", marks[i]['coID'], "]", "[", marks[i]['ID'], "]", "[", marks[i]['marks'], "]", )
 
-def StudentManagement():
+def manage_student():
     print("_____")
-    print("""please choose option you want:
+    print("please choose option you want:
     1.  Input  courses:
-    2.  Stop """)
+    2.  Stop")
     option = int(input("Choose:"))
     if option == 1:
         Nco = get_infomation_of_courses()
-        print("1.Add course:")
+        print("1.Choose the course course:")
         print("2.Stop")
         option1 = int(input("Choose:"))
         if option1 == 1:
@@ -110,7 +110,7 @@ def StudentManagement():
                             get_infomation_of_student()
                             show_courses()
                             show_student()
-                            print("1.Add marks:")
+                            print("1.Select marks:")
                             print("2.Stop:")
                             option3 = int(input("Choose:"))
                             if option3 == 1:
@@ -126,10 +126,10 @@ def StudentManagement():
         else:
             exit()
     else:
-        print("Out of service:")
+        print("You are done. Thank you!:")
         exit()
 
 
 show_marks()
-StudentManagement()
+manage_student()
 
