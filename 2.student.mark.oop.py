@@ -9,8 +9,8 @@ class Students:
         self.studentid = id
         self.student_name = name
         self.student_dob = dob
-        Student.append(self)
-        StudentID.append(self.studentid)
+        student.append(self)
+        studentid.append(self.studentid)
 
     def get_id(self):
         return self.id
@@ -22,15 +22,15 @@ class Students:
         return self.dob
 
 
-class Courses:
+class course:
     def __init__(self, id, name):
         self.studentid = id
         self.student_name = name
-        Course.append(self)
-        Course.append(self._id)
+        course.append(self)
+        course.append(self.studentid)
 
     def get_id(self):
-        return self._id
+        return self.studentid
 
     def get_name(self):
         return self.name
@@ -76,8 +76,8 @@ def get_infomation_of_student():
     info['name'] = input()
     print("Enter date of brith:")
     info['dob'] = input()
-    students.append(info)
-    student_id.append(id)
+    student.append(info)
+    studentid.append(id)
 
 
 def get_infomation_of_course():
@@ -98,7 +98,7 @@ def get_id_of_course():
         'id': id,
     }
     course.append(info)
-    course_id.append(id)
+    courseid.append(id)
 
 def mark():
     def __init__(self,cid,id,marks):
@@ -107,44 +107,44 @@ def mark():
         self.marks=marks
         mark.append(self)
     def describe(self):
-        print(["Coursesid:"],self.cid, ["Studentid:"],self.id, ["mark:"],self.marks)
+        print(["courseid:"],self.cid, ["studentid:"],self.id, ["mark:"],self.marks)
     def inputMark():
-         print("Enter Courses id")
+         print("Enter course id")
          cid=input()
-         if cid in CoursesID:
-             print("Enter Student ID:")
+         if cid in courseid:
+             print("Enter student id:")
              id=input()
-             if id in StudentID:
-                 print("Entrer marks:")
-                 marks=float(input())
-                 if marks<0 or marks >20:
-                     print("Error")
-                     print("Enter marks again")
-                     marks=float(input())
+             if id in studentid:
+                 print("Entre mark:")
+                 mark=float(input())
+                 if mark<0 or mark >20:
+                     print("Wrong")
+                     print("Enter mark again")
+                     mark=float(input())
              else:
                  return 0
          else:
              return 0
-         mark(cid,id,marks)
+         mark(cid,id,mark)
 
 
 class Start:
-    def show_student():
+    def student:
         print("List Student")
-        for i in range(0, len(students)):
-            print(f"id:{students[i]['id']} name:{students[i]['name']} DoB:{students[i]['DoB']}")
+        for i in range(0, len(student)):
+            print(f"id:{student[i]['id']} name:{student[i]['name']} DoB:{student[i]['DoB']}")
 
-    def show_course():
-        print("Show lists of courses:")
-        for i in range(0, len(courses)):
-            print("[", courses[i]['cID'], "]", "[", courses[i]['Name'], "]", )
+    def course:
+        print("Show lists of course:")
+        for i in range(0, len(course)):
+            print("[", course[i]['cID'], "]", "[", course[i]['name'], "]", )
 
-    def show_mark():
-        print("Show marks of students:")
-        for i in range(len(students)):
-            print("[", marks[i]['coID'], "]", "[", marks[i]['ID'], "]", "[", marks[i]['marks'], "]", )
+    def mark:
+        print("Show mark of student:")
+        for i in range(len(student)):
+            print("[", mark[i]['courseid'], "]", "[", mark[i]['id'], "]", "[", mark[i]['mark'], "]", )
 
-def StudentManagement():
+def student_management():
     print("_____")
     print("""please choose option you want:
     1.  Input  course:
@@ -166,16 +166,16 @@ def StudentManagement():
                     if option2 == 1:
                         for i in range(Num):
                             get_infomation_of_student()
-                            show_course()
-                            show_student()
+                            course()
+                            student()
                             print("1.Add mark:")
                             print("2.Stop:")
                             option3 = int(input("Choose:"))
                             if option3 == 1:
                                 mark()
-                                show_course()
-                                show_student()
-                                show_mark()
+                                course()
+                                student()
+                                mark()
                                 break
                             else:
                                 exit()
@@ -188,5 +188,5 @@ def StudentManagement():
         exit()
 
 
-Start.show_mark()
-Start.StudentManagement()
+Start.mark()
+Start.student_management()
