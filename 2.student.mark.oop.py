@@ -33,7 +33,7 @@ class course:
         return self.studentid
 
     def get_name(self):
-        return self.name
+        return self.student_name
 
 
 class mark:
