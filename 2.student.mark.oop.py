@@ -4,7 +4,7 @@ course = []
 courseid = []
 mark = []
 
-class Students:
+class student:
     def __init__(self, id, name, dob):
         self.studentid = id
         self.student_name = name
@@ -101,13 +101,13 @@ def get_id_of_course():
     courseid.append(id)
 
 def mark():
-    def __init__(self,cid,id,marks):
+    def __init__(self,cid,id,mark):
         self.cid=cid
         self.id=id
-        self.marks=marks
+        self.mark=mark
         mark.append(self)
     def describe(self):
-        print(["courseid:"],self.cid, ["studentid:"],self.id, ["mark:"],self.marks)
+        print(["courseid:"],self.cid, ["studentid:"],self.id, ["mark:"],self.mark)
     def inputMark():
          print("Enter course id")
          cid=input()
@@ -115,7 +115,7 @@ def mark():
              print("Enter student id:")
              id=input()
              if id in studentid:
-                 print("Entre mark:")
+                 print("Enter the mark:")
                  mark=float(input())
                  if mark<0 or mark >20:
                      print("Wrong")
