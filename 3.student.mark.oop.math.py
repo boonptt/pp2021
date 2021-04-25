@@ -138,7 +138,7 @@ def average_GPA(self):
             return GPA
     print("GPA")
 def caculate_mark(self):
-    print("=====GPA FIND ======")
+    print("GPA FIND")
     id_a=input("Enter the ID:")
     if id_a in self.studentid:
         mark=input("Enter the mark:")
