@@ -13,13 +13,13 @@ class student:
         studentid.append(self.studentid)
 
     def get_id(self):
-        return self.id
+        return self.studentid
 
     def get_name(self):
-        return self.name
+        return self.student_name
 
     def get_dob(self):
-        return self.dob
+        return self.student_dob
 
 
 class course:
