@@ -129,17 +129,17 @@ def mark():
 
 
 class Start:
-    def student:
+    def show_student:
         print("List Student")
         for i in range(0, len(student)):
             print(f"id:{student[i]['id']} name:{student[i]['name']} DoB:{student[i]['DoB']}")
 
-    def course:
+    def show_course:
         print("Show lists of course:")
         for i in range(0, len(course)):
             print("[", course[i]['cID'], "]", "[", course[i]['name'], "]", )
 
-    def mark:
+    def show_mark:
         print("Show mark of student:")
         for i in range(len(student)):
             print("[", mark[i]['courseid'], "]", "[", mark[i]['id'], "]", "[", mark[i]['mark'], "]", )
