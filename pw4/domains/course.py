@@ -2,7 +2,7 @@ course = []
 courseid = []
 credit = []
 
-class Courses:
+class course:
     def __init__(self, id, name):
         self.studentid = id
         self.student_name = name
